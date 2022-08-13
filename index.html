@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birds of Aotearoa</title>
+    <link rel="stylesheet" href="bird.css">
+    <script defer src="bird.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="data/images/kiwi.png" id="kiwi">
+        <h1>Birds of Aotearoa</h1>
+    </header>
+    <div id="sidebar">
+        <form>
+
+            <h2>Filter Birds</h2>
+
+            <h3 class="light-text">Search</h3>
+            <input id="search" type="text" placeholder="Search.." name="search">
+            <br><br>
+
+            <h3 class="light-text">Conservation Status</h3>
+            <select id="status">
+                <option selected="selected">Please select status</option>
+                <option>Not Threatened</option>
+                <option>Naturally Uncommon</option>
+                <option>Relict</option>
+                <option>Recovering</option>
+                <option>Declining</option>
+                <option>Nationally Increasing</option>
+                <option>Nationally Vulnerable</option>
+                <option>Nationally Endangered</option>
+                <option>Nationally Critical</option>
+                <option>Extinct</option>
+                <option>Data Deficient</option>
+            </select>
+            <br><br>
+
+            <h3 class="light-text">Sort By</h3>
+            <select id="sort">
+                <option selected="selected">Please select subject</option>
+                <option value="scientific_name">Scientific Name</option>
+                <option value="family">Family</option>
+                <option value="order">Order</option>
+                <option value="status">Status</option>
+                <option value="size.length.value">Length</option>
+                <option value="size.weight.value">Weight</option>
+            </select>
+            <br><br>
+
+            <button id="searchbtn">FILTER RESULTS</button>
+            <button id="clearbtn">CLEAR FILTERS</button>
+
+            <div class="result-div">
+                <p id="result"></p>
+            </div>
+
+        </form>
+
+        <hr>
+
+        <h2>Conservation Status</h2>
+
+        <table class="light-text">
+            <tr>
+                <td><span class="dot" id="not-threatened"></span></td>
+                <td>Not Threatened</td>
+            </tr>
+            <tr>
+                <td><span class="dot" id="naturally-uncommon"></span></td>
+                <td>Naturally Uncommon</td>
+            </tr>
+            <tr>
+                <td><span class="dot" id="relict"></span></td>
+                <td>Relict</td>
+            </tr>
+            <tr>
+                <td><span class="dot" id="recovering"></span></td>
+                <td>Recovering</td>
+            </tr>
+            <tr>
+                <td><span class="dot" id="declining"></span></td>
+                <td>Declining</td>
+            </tr>
+            <tr>
+                <td><span class="dot" id="nationally-increasing"></span></td>
+                <td>Nationally Increasing</td>
+            </tr>
+            <tr>
+                <td><span class="dot" id="nationally-vulnerable"></span></td>
+                <td>Nationally Vulnerable</td>
+            </tr>
+            <tr>
+                <td><span class="dot" id="nationally-endangered"></span></td>
+                <td>Nationally Endangered</td>
+            </tr>
+            <tr>
+                <td><span class="dot" id="nationally-critical"></span></td>
+                <td>Nationally Critical</td>
+            </tr>
+            <tr>
+                <td><span class="dot" id="extinct"></span></td>
+                <td>Extinct</td>
+            </tr>
+            <tr>
+                <td><span class="dot" id="data-deficient"></span></td>
+                <td>Data Deficient</td>
+            </tr>
+        </table>
+
+        <p class="light-text">Conservation status from <a href="https://www.doc.govt.nz/nature/conservation-status/">DOC
+                website</a>
+        </p>
+
+    </div>
+    <main id="bird-display-container">
+        <!-- bird data -->
+    </main>
+    <footer>
+        <p id="license">Data licensed from <a href="https://www.birdsnz.org.nz/">Birds New Zealand</a> for
+            educational use within the
+            University of Otago</p>
+    </footer>
+</body>
+
+</html>
