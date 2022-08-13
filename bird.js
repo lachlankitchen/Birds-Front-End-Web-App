@@ -171,7 +171,7 @@ async function searchHandler(eventData) {
         filteredData = [];
         let index = 0;
         for (let i = 0; i < jsonData.length; i++) {
-            if (jsonData[i].english_name.toLowerCase().includes(input) || jsonData[i].primary_name.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').includes(input)) {
+            if (jsonData[i].english_name.toLowerCase().includes(input) || jsonData[i].scientific_name.toLowerCase().includes(input) || jsonData[i].primary_name.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').includes(input)) {
                 filteredData[index] = jsonData[i];
                 index++;
             }
